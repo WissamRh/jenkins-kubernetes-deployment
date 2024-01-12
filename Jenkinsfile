@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Checkout Source') {
       steps {
-        git branch: 'main', credentialsId: 'github-credentials', 'https://github.com/WissamRh/jenkins-kubernetes-deployment.git'
+        git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/WissamRh/jenkins-kubernetes-deployment.git'
       }
     }
     stage('Build image') {
