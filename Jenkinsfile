@@ -32,7 +32,8 @@ pipeline {
     stage('Deploying React.js container to Kubernetes') {
       steps {
         script {
-          bat 'kubectl apply -f deployment.yaml'
+          def kubeconfigPath = "C:\Users\hp\.kube\config"
+          bat "kubectl apply -f deployment.yaml --kubeconfig=${kubeconfigPath}"
           bat 'kubectl apply -f service.yaml'
         }
       }
