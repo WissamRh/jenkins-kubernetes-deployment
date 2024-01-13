@@ -2,6 +2,7 @@ pipeline {
   environment {
     dockerimagename = "wissamrh/react-app"
     dockerImage = ""
+    kubeconfig = 'C:\Users\hp\.kube\config'
   }
   agent any
   stages {
